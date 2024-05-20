@@ -31,8 +31,9 @@
             }
             else
             {
-                Console.WriteLine("Invalid input, please enter a valid number.");
-                continue; // Go to the start of the loop to re-prompt the number
+                numbers.Add(userInput);
+                //Console.WriteLine("Invalid input, please enter a valid number.");
+                //continue; // Go to the start of the loop to re-prompt the number
             }
 
             // Prompts the user if they would like to keep adding more numbers 
@@ -49,7 +50,15 @@
         Console.WriteLine("Here are your numbers: ");
         foreach (var number in numbers)
         {
-            Console.Write(number + " ");
+            if (number is string)
+            {
+                Console.Write(number + " - Not a valid number ");
+            }
+            else
+            {
+                Console.Write(number + "This is a valid number ");
+            }
+
         }
     }
 }
