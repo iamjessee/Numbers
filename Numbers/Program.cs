@@ -32,8 +32,6 @@
             else
             {
                 numbers.Add(userInput);
-                //Console.WriteLine("Invalid input, please enter a valid number.");
-                //continue; // Go to the start of the loop to re-prompt the number
             }
 
             // Prompts the user if they would like to keep adding more numbers 
@@ -46,7 +44,7 @@
             }
         }
 
-        // displays numbers entered by user
+        // displays user input and shares weather they are valid or not
         Console.WriteLine("Here are your numbers: ");
         foreach (var number in numbers)
         {
